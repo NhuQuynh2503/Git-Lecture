@@ -1,8 +1,7 @@
-//import './assets/main.css'
 
+import "./assets/main.css"
 import { createApp } from 'vue'
 import App from './App.vue'
-
 //createApp(App).mount('#app')
 import { Icon } from '@iconify/vue';
 const app = createApp(App)

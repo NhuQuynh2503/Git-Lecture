@@ -1,5 +1,5 @@
 <template>
-    <button @click="getData">Get Data</button>
+    <!-- <button @click="getData">Get Data</button>
     
       <div class="wrapper" >
         <div class="box" v-for="item in data" @click="onSelect(item)">
@@ -20,40 +20,40 @@
           </div>
         </div>
         <button class="arrow-btn right" @click="scrollRight"><Icon icon="material-symbols-light:arrow-forward-ios"></Icon></button>
-      </div>
-    
+      </div> -->
+    <Thu/>
 </template>
 <script setup>
   import {ref} from "vue"
-  import axios from "axios";
-  const currentSelected = ref({
-    newId:"",
-    title:"",
-    priceAfter:"",
-    discount:"",
-    price:"",
-    location:"",
-    sold:""
-  })
-  const scrollLeft = () => {
-    const container = document.querySelector('.wrapper');
-    container.scrollLeft -= 200; // Điều chỉnh giá trị di chuyển
-  }
-  const scrollRight = () => {
-    const container = document.querySelector('.wrapper');
-    container.scrollLeft += 200; // Điều chỉnh giá trị di chuyển
-  }
-  const data = ref([])
-  const getData= () => {
-    axios.get('https://6610ce890640280f219d706e.mockapi.io/api/message')
-    .then((response)=>{
-        data.value = response.data
-    })
-}
- 
+  import axios from "axios"
+  import Thu from "./components/Thu.vue";
+//   const currentSelected = ref({
+//     newId:"",
+//     title:"",
+//     priceAfter:"",
+//     discount:"",
+//     price:"",
+//     location:"",
+//     sold:""
+//   })
+//   const scrollLeft = () => {
+//     const container = document.querySelector('.wrapper');
+//     container.scrollLeft -= 200; // Điều chỉnh giá trị di chuyển
+//   }
+//   const scrollRight = () => {
+//     const container = document.querySelector('.wrapper');
+//     container.scrollLeft += 200; // Điều chỉnh giá trị di chuyển
+//   }
+//   const data = ref([])
+//   const getData= () => {
+//     axios.get('https://6610ce890640280f219d706e.mockapi.io/api/message')
+//     .then((response)=>{
+//         data.value = response.data
+//     })
+// }
 </script>
 <style scoped>
-  *{
+  /* *{
     margin: 0;padding: 0;
   }
   .arrow-btn {
@@ -74,13 +74,13 @@
   }
   .wrapper {
     display: flex;
-    flex-wrap: nowrap; /* Không cho phép các sản phẩm xuống dòng */
-    overflow-x: auto; /* Cho phép cuộn ngang nếu có nhiều sản phẩm */
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
     gap: 10px;
     padding: 10px;
   }
   .box {
-    flex: 0 0 calc(20% - 10px); /* Mỗi box chiếm 20% của chiều rộng wrapper, trừ khoảng cách giữa các box */
+    flex: 0 0 calc(20% - 10px); 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(74, 74, 74, 0.5);
@@ -102,7 +102,7 @@
     color: #333;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; /* Hiển thị dấu ba chấm (...) nếu tiêu đề quá dài */
+    text-overflow: ellipsis;
   }
   .price-after {
     font-size: 20px;
@@ -154,5 +154,5 @@
   }
   .sold {
     color: #b2b2b2;
-  }
+  } */
 </style>
